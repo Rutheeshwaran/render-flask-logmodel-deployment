@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from flask import Flask, render_template, request
 import joblib
+import dill
 
 # This custom function must be here because your jolib file needs it
 def cap_outliers_iqr(a):
@@ -17,8 +18,8 @@ def cap_outliers_iqr(a):
 
 app = Flask(__name__)
 
-# Load the pipeline
-logestic_model = joblib.load(open('stroke1.pkl', 'rb'))
+with open('stroke.dill', 'rb') as file: # <--- CHANGE #2: USE DILL TO LOAD
+    logestic_model = dill.load(file)
 
 # --- ADD 'id' BACK TO THE COLUMN LIST ---
 COLUMN_NAMES = [
