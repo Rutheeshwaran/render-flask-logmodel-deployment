@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <title>Logestic_Regression_Stroke_prediction</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="color: green">Logistic regression model</h1>
+    </center>
+    <div class="form">
+      <center>
+        <form action="{{url_for('predict')}}" method="POST">
+          <div class="fol">
+            <label for="id"> Id:</label>
+            <input type="number" id="id" name="id" required />
+            <br /><br />
+          </div>
+          <div class="fol">
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" name="gender" required />
+            <br /><br />
+          </div>
+          <div class="fol">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required />
+            <br /><br />
+          </div>
+          <div class="fol">
+            <label for="hypertension">Hyper_tension(Enter as 0 or 1):</label>
+            <input
+              type="number"
+              id="hypertension"
+              name="hypertension"
+              required
+            />
+            <br /><br />
+          </div>
+          <div class="fol">
+            <label for="heart_disease">Heart_disease(Enter as 0 or 1):</label>
+            <input
+              type="number"
+              id="heart_disease"
+              name="heart_disease"
+              required
+            />
+            <br /><br />
+          </div>
+          <div class="fol">
+            <label for="ever_married">Ever_married:</label>
+            <input type="text" id="ever_married" name="ever_married" required />
+            <br /><br />
+          </div>
+          <div class="fol">
+            <label for="work_type">Work_type:</label>
+            <input type="text" id="work_type" name="work_type" required />
+            <br /><br />
+          </div>
+          <div class="fol">
+            <label for="Residence_type">Residence_Type:</label>
+            <input
+              type="text"
+              id="Residence_type"
+              name="Residence_type"
+              required
+            />
+            <br /><br />
+          </div>
+          <div class="fol">
+            <label for="avg_glucose_level"> Avg_glucose_level:</label>
+            <input
+              type="number"
+              id="avg_glucose_level"
+              name="avg_glucose_level"
+              step="0.00"
+              required
+            />
+            <br /><br />
+          </div>
+          <div class="fol">
+            <label for="bmi">Heart_disease(Enter as 0 or 1):</label>
+            <input type="number" id="bmi" name="bmi" step="0.0" required />
+            <br /><br />
+          </div>
+          <div class="fol">
+            <label for="smoking_status">Smoking_status:</label>
+            <input
+              type="text"
+              id="smoking_status"
+              name="smoking_status"
+              required
+            />
+            <br /><br />
+          </div>
+
+          predict->><input type="submit" style="background-color: yellow" />
+          Reset->><input type="reset" style="background-color: orange" />
+        </form>
+      </center>
+    </div>
+    <center>
+      <br />
+      <br />
+      {{ predicted_val }}
+      <br />
+      <br />
+    </center>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+body{
+    background-color:lightblue;
+}
+.form{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    width: 400px;
+    padding: 10px;
+    margin-top: 50px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+}
+ 
+.fol {
+    display: flex;         /* Use Flexbox for alignment */
+    align-items: center;   /* Vertically align the label and input */
+    margin-bottom: 15px;   /* Add some space between each row */
+}
+ 
+
+ 
+.fol label {
+    width: 200px;             /* 1. Give all labels a FIXED width. This creates the first column. */
+    text-align: left;         /*lign the text to the right, so it's neat against the input box. */
+    margin-right: 20px;       /* 3. Add some space between the label and the input box. */
+    font-weight: bold;        /* Make the labels stand out a bit. */
+}
+
+ 
+.fol {
+    flex: 1;                  /* 4. Tell the input to take up all the remaining available space. */
+    padding: 8px;             /* Add some internal padding to the input boxes. */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
