@@ -1,39 +1,99 @@
-body{
-    background-color:lightblue;
-}
-.form{
-    display:flex;
-    flex-direction:column;
+/* In static/style.css */
+
+/* --- 1. Style the main page body --- */
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    margin: 0;
+
+    /* This will help center the main form block */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 400px;
-    padding: 10px;
-    margin-top: 50px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-
+    padding: 20px; /* Add some padding around the edges */
 }
- 
+
+/* --- 2. Style the main container (using your class name 'form') --- */
+.form {
+    width: 600px; /* Wider for the longer labels */
+    padding: 30px;
+    margin-top: 20px;
+    background-color: #ffffff; /* A clean white background */
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Center the main title (we can target it directly) */
+h1 {
+    color: green;
+    margin-bottom: 30px;
+}
+
+/* --- 3. Style each form row (using your class name 'fol') --- */
 .fol {
-    display: flex;         /* Use Flexbox for alignment */
-    align-items: center;   /* Vertically align the label and input */
-    margin-bottom: 15px;   /* Add some space between each row */
+    display: flex;
+    align-items: center;   /* Vertically aligns the text and the input box */
+    margin-bottom: 20px;   /* Adds space between each row */
 }
- 
 
- 
+/* --- 4. Style the labels inside each row --- */
 .fol label {
-    width: 200px;             /* 1. Give all labels a FIXED width. This creates the first column. */
-    text-align: left;         /*lign the text to the right, so it's neat against the input box. */
-    margin-right: 20px;       /* 3. Add some space between the label and the input box. */
-    font-weight: bold;        /* Make the labels stand out a bit. */
+    width: 250px;           /* Give all labels a fixed width to create the first column */
+    text-align: right;      /* Align text to the right for a clean edge */
+    margin-right: 20px;     /* Add space between the label and the input box */
+    font-weight: bold;
+    color: #333;
 }
 
- 
-.fol {
-    flex: 1;                  /* 4. Tell the input to take up all the remaining available space. */
-    padding: 8px;             /* Add some internal padding to the input boxes. */
+/* --- 5. Style the input boxes inside each row --- */
+.fol input[type="text"],
+.fol input[type="number"] {
+    flex: 1;                /* Makes the input box grow to fill the remaining space */
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* --- 6. Style the submit and reset buttons --- */
+/* Remove the inline styles from your HTML for this to work best */
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 25px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Make them look different */
+input[type="submit"] {
+    background-color: yellow;
+}
+
+input[type="reset"] {
+    background-color: orange;
+}
+
+/* Add a nice hover effect */
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Style for the prediction result text */
+h3.prediction-result { /* Added a class for more specific styling */
+    margin-top: 30px;
+    font-size: 24px;
+    color: #004085;
+    background-color: #cce5ff;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #b8daff;
 }
