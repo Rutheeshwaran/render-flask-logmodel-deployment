@@ -18,7 +18,7 @@ def cap_outliers_iqr(a):
 app = Flask(__name__)
 
 # Load the pipeline
-logestic_model = joblib.load(open('stroke.pkl', 'rb'))
+logestic_model = joblib.load(open('stroke1.pkl', 'rb'))
 
 # --- ADD 'id' BACK TO THE COLUMN LIST ---
 COLUMN_NAMES = [

@@ -1,6 +1,5 @@
 venv
 healthcare-dataset-stroke-data.csv
-model.pkl
 pyproject.toml
 poetry.lock
 pyproject.toml
