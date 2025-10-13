@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
 from flask import Flask, render_template, request
-import pickle
+import joblib
 
-# This custom function must be here because your pickle file needs it
+# This custom function must be here because your jolib file needs it
 def cap_outliers_iqr(a):
     x_col = a.copy()
     for i in x_col.columns:
@@ -18,7 +18,7 @@ def cap_outliers_iqr(a):
 app = Flask(__name__)
 
 # Load the pipeline
-logestic_model = pickle.load(open('stroke.pkl', 'rb'))
+logestic_model = joblib.load(open('stroke.pkl', 'rb'))
 
 # --- ADD 'id' BACK TO THE COLUMN LIST ---
 COLUMN_NAMES = [
