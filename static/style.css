@@ -97,3 +97,8 @@ h3.prediction-result { /* Added a class for more specific styling */
     border-radius: 5px;
     border: 1px solid #b8daff;
 }
+h1{
+    display:flex;
+    background-color:white;
+    
+}
